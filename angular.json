@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/siteBea-D-ployed/",
             "outputPath": "docs",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -50,8 +51,8 @@
                   "maximumError": "5mb"
                 }
               ],
-              "outputHashing": "all",
-              "baseHref": "/siteBea-D-ployed"
+              "outputHashing": "all"
+             
             },
             "development": {
               "buildOptimizer": false,
