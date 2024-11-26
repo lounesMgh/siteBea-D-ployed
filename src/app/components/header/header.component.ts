@@ -50,13 +50,13 @@ export class HeaderComponent implements OnInit {
 
   openEbankingWindow(event: Event): void {
     event.preventDefault(); 
-    const url = window.location.origin + '/E-Banking';
+    const url = window.location.origin + '/siteBea-D-ployed/E-Banking';
     window.open(url, '_blank');
   }
   
   openPreDomiciliationWindow(event: Event): void {
     event.preventDefault(); 
-    const url = window.location.origin + '/Pré-domiciliation';
+    const url = window.location.origin + '/siteBea-D-ployed/Pré-domiciliation';
     window.open(url, '_blank');
   }
   

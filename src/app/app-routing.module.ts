@@ -40,11 +40,11 @@ const routes: Routes = [
     component: EventComponent
   },
   {
-    path: 'E-Banking',
+    path: 'siteBea-D-ployed/E-Banking',
     component: EBankingComponent
   },
   {
-    path: 'Pré-domiciliation',
+    path: 'siteBea-D-ployed/Pré-domiciliation',
     component: PreDomiciliationComponent
   },
   {
