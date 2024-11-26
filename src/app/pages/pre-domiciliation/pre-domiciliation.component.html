@@ -1,0 +1,55 @@
+<section class="container-fluid">
+  <div class="row vh-100">
+    <div class="col-md-7 col-12 d-flex flex-column justify-content-between">
+
+      <div class="fw-medium  mt-3 ms-3">
+        <img class="image-header" src="assets/images/Bea/logoBeaOfficiel.png" width="200">
+      </div>
+      
+      <div class="px-4 mb-5 sign-container mx-auto">
+        <div class="text-center">
+          <h2 class="fw-bold txt-bea fs-1 my-4 ">Pré-domiciliation</h2>
+          <div class="mb-5 mx-auto signin-border"></div>
+          <div class=" mb-5 ">
+            Authentifiez-vous et formulez votre demande en ligne, vous aurez une réponse sous 48 heures maximum.
+          </div>
+          <div class="position-relative my-4">
+            <input class="form-control inputbox shadow-none p-2" name="utilisateur" id="email" placeholder="">
+            <div class="input-label position-absolute px-2 bg-white z-1">
+              <label for="email" class="control-label txt-bea fw-bold">Utilisateur</label>
+            </div>
+            <i class="fas fa-user username-icon"></i>
+          </div>
+          <div class="position-relative my-5">
+            <input class="form-control inputbox shadow-none p-2" [type]="passwordFieldType" name="password"
+              id="password" placeholder="">
+            <div class="input-label position-absolute px-2 bg-white z-1">
+              <label for="password" class="control-label txt-bea fw-bold">Mot de passe</label>
+            </div>
+            <i id="showCursor" class="fas password-icon"
+              [ngClass]="{'fa-eye-slash': passwordFieldType === 'password', 'fa-eye': passwordFieldType === 'text'}"
+              (click)="togglePasswordVisibility()"></i>
+          </div>
+          <div class="d-flex justify-content-between align-items-center mb-3  mx-auto">
+            <div>
+              <button class="btn btn-primary rounded-pill ps-4 pe-4 fw-bold">Connexion</button>
+            </div>
+            <a href="#" class="text-reset text-decoration-none fw-bold" (click)="openChangePasswordWindow($event)">Mot de passe oublié ?</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class=" mb-3 text-center">
+        <!-- La domiciliation en ligne d'une transaction courante avec l'étranger et aux comptes devises<br> -->
+        Faites votre demande de domiciliation où vous voulez et quand vous voulez!
+      </div>
+    </div>
+    <div class="col-md-5 col-12 bg-bea d-flex">
+      <div class="text-white text-center m-auto m-5 p-5">
+        <p class="fs-5 my-4">Pour vous initier, vous pouvez télécharger le mode opératoire.</p>
+        <button class="btn fw-bold btn-lg border-white rounded-5 px-5 fs-6 text-white">Cliquez ici</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,122 @@
+.carousel {
+  gap: 16px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel .card {
+  scroll-snap-align: start;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  border-radius: 8px;
+}
+
+.custom-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.menuSol {
+  background-color: hsl(0, 8%, 91%);
+  padding-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .card-overlay {
+    position: inherit;
+    width: 100%;
+    max-width: 100%;
+    left: 0;
+  }
+
+  .menuSol {
+    background-color: white;
+    padding-top: 0px;
+  }
+}
+
+.mourabaha {
+  overflow: hidden;
+}
+
+.mourabaha .nav-tabs {
+  border: 0;
+}
+
+.mourabaha .nav-link {
+  border: 0;
+  padding: 12px;
+  background-color: rgb(226, 240, 249);
+  color: grey;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.mourabaha .nav-link.active {
+  border-bottom: 4px solid #1163de;
+  font-weight: bold;
+  color: white;
+  background-color: #1163de;
+}
+
+.mourabaha .tab-pane.active {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.mourabaha .details h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.mourabaha .details p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.mourabaha .details p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .mourabaha .nav-tabs {
+    display: none;
+  }
+
+  .mourabaha .accordion-body {
+    padding: 1rem;
+  }
+
+  .mourabaha .details {
+    padding: 1rem;
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: white;
+    background-color: #1163de;
+  }
+}
+
+.custom-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  margin-bottom: 5px;
+}
+

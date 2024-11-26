@@ -1,0 +1,52 @@
+.footer {
+  background-color: #0f52ba;
+  color: white;
+  background-size: cover;
+  font-size: 14px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.custom-list {
+  list-style-type: none;
+  padding-left: 0;
+  text-decoration: none !important;
+}
+
+.custom-list li {
+  margin-bottom: 10px;
+  text-decoration: none !important;
+  margin-left: 5px;
+  display: flex;
+}
+
+.custom-list:not(.exclude-hover) li:hover {
+  font-weight: bold;
+}
+
+.custom-list i {
+  margin-right: 8px;
+  margin-top: 2px;
+}
+
+.custom-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.image-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.image-button img {
+  display: block;
+  width: 150px;
+  height: auto;
+}
+
+.no-pointer {
+  cursor: default !important;
+}

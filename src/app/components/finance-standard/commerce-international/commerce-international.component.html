@@ -1,0 +1,603 @@
+<div class=" marginImage  ">
+  <div class="image-container col-lg-12">
+    <img src="../../../../assets/images/Bea/Commerce international.jpg"
+      class="img-fluid responsive-img" alt="Image">
+    <div class="card card-overlay rounded-0">
+      <div class="card-body">
+        <h5 class="fw-bold txt-bea">
+          COMMERCE INTERNATIONAL
+        </h5>
+        <h6>
+          Facilitez vos opérations à l'international et franchissez ensemble de nouvelles frontières
+          économiques.
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="mb-3 mt-2">
+    <h3 class="fw-bold txt-bea text-center">
+      Nos moyens de paiement à l'international.
+    </h3>
+    <p class="text-center">
+      La Banque Extérieure d'Algérie vous offre des solutions de paiement à l'international sécurisées et rapides.
+      Profitez de notre expertise pour des transactions fiables et efficaces, avec un support client dédié.
+    </p>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6 mb-4" *ngFor="let MoyenPaimentInternational of MoyenPaimentInternationals">
+          <div class="card h-100">
+            <div class="row g-0">
+              <div class="col-md-5">
+                <img [src]="MoyenPaimentInternational.image" class="img-fluid rounded-start"
+                  [alt]="MoyenPaimentInternational.title">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="text-center text-secondary fw-bold">{{ MoyenPaimentInternational.title }}</h5>
+                  <p class="card-text">{{ MoyenPaimentInternational.designation }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-4">
+    <h3 class="fw-bold txt-bea text-center">
+      Nos tarifs pour le commerce international.
+    </h3>
+    <p class="text-center">
+      Chez la Banque Extérieure d'Algérie (BEA), nous vous offrons des tarifs compétitifs et transparents pour faciliter
+      vos transactions commerciales internationales. Que ce soit pour les lettres de crédit, les encaissements
+      documentaires ou les garanties bancaires, nos services sont conçus pour répondre à vos besoins tout en optimisant
+      vos coûts.
+    </p>
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead >
+          <tr>
+            <th class="bg-primary text-white fw-bold pt-3 pb-3" scope="col"></th>
+            <th class="bg-primary text-white fw-bold pt-3 pb-3" scope="col">
+              Nature des opérations
+            </th>
+            <th class="bg-primary text-white fw-bold pt-3 pb-3" scope="col">
+              Commissions
+            </th>
+            <th class="bg-primary text-white fw-bold pt-3 pb-3" scope="col">
+             Date de valeur
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container class="mt-3">
+            <tr>
+              <td scope="col" class="bg-secondary text-white"></td>
+              <td scope="col" class="bg-secondary text-white">9 - OPERATIONS DE COMMERCE EXTERIEUR</td>
+              <td scope="col" class="bg-secondary text-white"></td>
+              <td scope="col" class="bg-secondary text-white"></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows; let i = index">
+            <tr (click)="toggleRow(i)" [class.table-active]="row.isOpen">
+              <th scope="row" class="bg-light-secondary text-white">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td class="bg-light-secondary text-white">9-1. OPERATIONS A L'IMPORT</td>
+              <td class="bg-light-secondary text-white"></td>
+              <td class="bg-light-secondary text-white"></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>{{ row.natureOperations }}</td>
+              <td>{{ row.commissions }}</td>
+              <td>{{ row.dateValeur }}</td>
+            </tr>
+          </ng-container>
+
+          <ng-container *ngFor="let row of rows1; let i = index">
+            <tr (click)="toggleRow1(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>a) Credoc à l’import :</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Ouverture du credoc</td>
+              <td>Commission fixe 3. OOODA + frais Swift 3.000 DA</td>
+              <td>Veille de l'opération</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Modification ou annulation du credoc</td>
+              <td>Commission fixe 3.500 DA</td>
+              <td>Veille de l'opération</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné</td>
+              <td>2.5 %</td>
+              <td>Par trimestre mobile indivisible sur le montant de l'engagement en cours avec un Minimum de 2.500 DA
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements partiellement provisionné</td>
+              <td>2.5 %</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 90%</td>
+              <td>2.90 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 85%</td>
+              <td>3.10 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 80%</td>
+              <td>3.30 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 75%</td>
+              <td>3.50 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 70%</td>
+              <td>3.70 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 50%</td>
+              <td>4.50 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 30%</td>
+              <td>5.30 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 25%</td>
+              <td>5.50 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 20%</td>
+              <td>5.70 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 25%</td>
+              <td>5.50 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 15%</td>
+              <td>5.90 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements provisionné à 10%</td>
+              <td>6.10 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Engagements non provisionné</td>
+              <td>6.50 ‰</td>
+              <td>// // // //
+              </td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Commission de change et de règlement</td>
+              <td>Frais Swift 3,000 DA</td>
+              <td>Date d’ouverture</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Récupération commission de transfert<br> Banque d'Algérie (Comptes devises<br> exclus)</td>
+              <td>1 ‰</td>
+              <td>Date de règlement</td>
+            </tr>
+          </ng-container>
+
+          <ng-container *ngFor="let row of rows2; let i = index">
+            <tr (click)="toggleRow2(i)" [class.table-active]="row.isOpen">
+              <th scope="row" class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>b )Remdoc à l'importation :</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>-Commission de change et de règlement</td>
+              <td>Frais Swift 3.000 DA</td>
+              <td>Date de règlement</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>-Commission acceptation</td>
+              <td>Commission 3.500 DA</td>
+              <td>Date d'acceptation</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Récupération commission de transfert<br> Banque d'Algérie (Comptes devises<br> exclus)</td>
+              <td>1‰</td>
+              <td>Date de règlement</td>
+            </tr>
+          </ng-container>
+
+          <ng-container *ngFor="let row of rows3; let i = index">
+            <tr (click)="toggleRow3(i)" [class.table-active]="row.isOpen">
+              <th scope="row" class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>c)Opérations de transfert</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>-Commission de change et de règlement</td>
+              <td>0.25% avec minimum de 2,500 DA + frais Swift 1.500 DA</td>
+              <td>Date de règlement</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>-Récupération commission de transfert <br>Banque d’Algérie (Comptes <br>devises exclus)</td>
+              <td>1‰</td>
+              <td>Date de règlement</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Toutes les commissions sur les <br> opérations de la Banque, sont soumises<br> à la TVA au taux en vigueur.
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows4; let i = index">
+            <tr (click)="toggleRow4(i)" [class.table-active]="row.isOpen">
+              <th scope="row" class="bg-light-secondary text-white">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td class="bg-light-secondary text-white">9-2 - OPERATIONS A L'EXPORT</td>
+              <td class="bg-light-secondary text-white"></td>
+              <td class="bg-light-secondary text-white"></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>{{ row.natureOperations }}</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows5; let i = index">
+            <tr>
+              <th></th>
+              <td>a) Domiciliation</td>
+              <td>1.500 DA par dossier</td>
+              <td>Date d’ouverture</td>
+            </tr>
+
+          </ng-container>
+          <ng-container *ngFor="let row of rows6; let i = index">
+            <tr (click)="toggleRow6(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>b) Credoc à l'Export</td>
+              <td></td>
+              <td></td>
+            </tr>
+
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Commission de Confirmation</td>
+              <td>1‰ Minimum 5.000 DA par trimestre indivisible</td>
+              <td>Date de confirmation</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Commission de notification</td>
+              <td> 0.50‰ Minimum 2.500 DA par trimestre indivisible</td>
+              <td>Date de notification</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Commission de négociation (paiement)</td>
+              <td>1‰ Sur le montant facturé minimum 2.500 DA chaque expédition</td>
+              <td>Date de négociation</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Commission de paiement différé</td>
+              <td>1‰ Par mois sur le montant facturé minimum 2.500 DA</td>
+              <td>Date de facturation</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Frais de modification</td>
+              <td>2.000 DA sur chaque modification</td>
+              <td>Date de modification</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Frais de courrier (DHL, etc.…)</td>
+              <td>Selon facture (montant de la prestation)</td>
+              <td></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows7; let i = index">
+            <tr (click)="toggleRow7(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>c) - Remdoc à l’export</td>
+              <td>01% flat max : 2.000 DA par dossier </td>
+              <td></td>
+            </tr>
+
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Toutes les commissions sur les <br> opérations de la Banque, sont soumises<br> à la TVA au taux en vigueur.
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </ng-container>
+          <ng-container>
+            <tr>
+              <td scope="col" class="bg-secondary text-white"></td>
+              <td scope="col" class="bg-secondary  text-white">10 - OPERATIONS DE PORTEFEUILLE COMMERCE EXTERIEUR</td>
+              <td scope="col" class="bg-secondary  text-white"></td>
+              <td scope="col" class="bg-secondary  text-white"></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows8; let i = index">
+            <tr (click)="toggleRow8(i)" [class.table-active]="row.isOpen">
+              <th scope="row" class="bg-light-secondary text-white">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td class="bg-light-secondary text-white">10-1 Encaissement de chèques sur l'Etranger</td>
+              <td class="bg-light-secondary text-white">0,15% | Minimum 1.000 DA | Maximum 3.000 DA</td>
+              <td class="bg-light-secondary text-white">Date de présentation du chèque</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>{{ row.natureOperations }}</td>
+              <td>{{ row.commissions }}</td>
+              <td>{{ row.dateValeur }}</td>
+            </tr>
+          </ng-container>
+          <ng-container>
+            <tr>
+              <td scope="col" class="bg-light-secondary text-white"></td>
+              <td scope="col" class="bg-light-secondary text-white">10-2. Emission de chèques payables à l'étranger</td>
+              <td scope="col" class="bg-light-secondary text-white">0.25%</td>
+              <td scope="col" class="bg-light-secondary text-white">Date de présentation du chèque</td>
+            </tr>
+          </ng-container>
+          <ng-container>
+            <tr>
+              <td scope="col" class="bg-light-secondary text-white"></td>
+              <td scope="col" class="bg-light-secondary text-white">10-3. Encaissement d'Effets</td>
+              <td scope="col" class="bg-light-secondary text-white"></td>
+              <td scope="col" class="bg-light-secondary text-white"></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows9; let i = index">
+            <tr (click)="toggleRow9(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>a) - Effets libres remis pour crédit après encaissement</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Domiciliés agences BEA</td>
+              <td>0,15% par appoint min 600DA max 2.400 DA:</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Domiciliés chez un confrère</td>
+              <td>0,15% par appoint par appoint min : 1.200 DA 2.400 DA</td>
+              <td></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows10; let i = index">
+            <tr (click)="toggleRow10(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>b)-Effet ou remises documentaires pour encaissement ou acceptation </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Domiciliés chez une de nos agences</td>
+              <td>0,25% par appoint min 2.000 DA max 10.000 DA</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Domiciliés chez une autre banque</td>
+              <td>0,25% par appoint min 2.000 DA max : 15.000 DA</td>
+              <td></td>
+            </tr>
+          </ng-container>
+          <ng-container *ngFor="let row of rows11; let i = index">
+            <tr (click)="toggleRow11(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="ps-3">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td>c)- Supplément éventuel </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Effets non domiciliés</td>
+              <td>1000 DA [effet</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Présentation supplémentaire ou à l'acceptation</td>
+              <td>l'acceptation 600 DA</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>- Effets en souffrance, un mois après réception (effet à vue) oujours après échéance</td>
+              <td>0.1% mois min :600 DA/effet</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Prorogation d'Effets, avis de sort</td>
+              <td>1.000 DA]effet</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td> - Retour d’Effets réclamés impayés </td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td> - Non protesté </td>
+              <td>1.000 DA/effet </td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td> - Protesté </td>
+              <td>1.000 DA/effet+frais</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Toutes les commissions sur les <br> opérations de la Banque, sont soumises<br> à la TVA au taux en vigueur.
+              </td>
+              <td></td>
+              <td></td>
+            </tr>
+          </ng-container>
+
+          <ng-container *ngFor="let row of rows12; let i = index">
+            <tr (click)="toggleRow12(i)" [class.table-active]="row.isOpen">
+              <th scope="row " class="bg-secondary text-white">
+                <i *ngIf="row.isOpen" class="fa-solid fa-chevron-down"></i>
+                <i *ngIf="!row.isOpen" class="fa-solid fa-chevron-up"></i>
+              </th>
+              <td class="bg-secondary  text-white">11 - FRAIS APPLIOUES AUX CORRESPONDANTS ETRANGERS (GARANTIES
+                INTERNATIONALES) </td>
+              <td class="bg-secondary  text-white"></td>
+              <td class="bg-secondary text-white"></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Frais constitution de Dossier</td>
+              <td>3.500 DA</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Commission d’Engagement</td>
+              <td>1 % l'an | min 2.000 DA</td>
+              <td>0,25% par trimestre entier et indivisible</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Frais de gestion</td>
+              <td>1.500 DA</td>
+              <td>A partir du 2eme trimestre</td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Frais de modification</td>
+              <td>2.000 DA</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Frais de mise en jeu</td>
+              <td>2.000 DA</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Frais de Recherche</td>
+              <td>2.000 DA</td>
+              <td></td>
+            </tr>
+            <tr *ngIf="row.isOpen">
+              <td></td>
+              <td>Frais Divers (Swift, timbres fiscaux...)</td>
+              <td>Variable selon le cas</td>
+              <td></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

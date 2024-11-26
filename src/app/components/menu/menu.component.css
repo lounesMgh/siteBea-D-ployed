@@ -1,0 +1,123 @@
+.navbar-nav {
+    flex-direction: row;
+    padding-left: 5rem;
+    padding-right: 5rem;
+
+}
+.navbar-nav .nav-link {
+    color: #999;
+    transition: background-color 0.3s;
+
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-top-left-radius: var(--bs-border-radius) !important;
+    border-top-right-radius: var(--bs-border-radius) !important;
+
+}
+
+.navbar-nav .nav-link.active-menu {
+    background-color: #0d6efd;
+    color: #fff;
+    border-top-left-radius: var(--bs-border-radius) !important;
+    border-top-right-radius: var(--bs-border-radius) !important;
+}
+
+/* Styles pour les sous-menus */
+.submenu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.active-subMenu {
+    background-color: #0f52ba;
+    color: #fff;
+}
+
+.submenu .nav-link {
+    color: #fff;
+}
+
+.submenu .nav-link:hover {
+    background-color: #0f52ba;
+}
+
+.nav-item.ml-auto {
+    margin-left: auto;
+}
+
+/* Ajustements pour la version mobile */
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+        padding-left: 4rem;
+        padding-right: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-nav .nav-link {
+        color: white;
+        background-color: rgb(175, 169, 169);
+    }
+
+    .navbar-toggler {
+        display: block;
+        margin-right: 1rem;
+        margin-top: -3.5rem;
+        padding: 0px;
+        border: none;
+    }
+
+    .navbar-toggler:focus,
+    .navbar-toggler :active,
+    .navbar-toggler :focus-visible {
+        background-color: white;
+        color: #007bff;
+        box-shadow: none;
+        padding: 0px;
+        border: none;
+    }
+
+    .navbar-toggler.custom-toggler {
+        background-color: white !important;
+        color: #007bff !important;
+        border: none !important;
+        outline: none !important;
+    }
+
+    .navbar-toggler.custom-toggler:focus,
+    .navbar-toggler.custom-toggler:active {
+        background-color: white !important;
+        color: #007bff !important;
+        box-shadow: none !important;
+    }
+
+    .submenu {
+        flex-direction: column;
+        background-color: white;
+        padding: 0;
+    }
+
+    .submenu .nav-link {
+        background-color: #CADAF9;
+        color: black;
+    }
+
+    .submenu .nav-link:hover {
+        background-color: #0f52ba;
+        color: #fff;
+    }
+
+    .active-subMenu {
+        background-color: #0f52ba!important;
+        color: #fff!important;
+    }
+
+
+}

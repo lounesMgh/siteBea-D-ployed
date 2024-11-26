@@ -1,0 +1,63 @@
+<marquee class="marginMarque" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3">
+  <span>
+    <a class="text-dark text-decoration-none">
+      <span class="text-primary">Cours des principales monnaies (achat / vente):&nbsp;</span>
+      <ng-container *ngFor="let currency of currencies; let last = last">
+        <span>{{currency.buy}} {{currency.currency}} => {{currency.buy}} / {{currency.sell}}</span>
+        <strong *ngIf="!last" class="text-primary"> &nbsp;|&nbsp; </strong>
+      </ng-container>
+    </a>
+  </span>
+</marquee>
+
+<div class="navbar navbar-expand-lg navbar-white bg-white">
+  <div class="container-fluid margin-header d-flex justify-content-between align-items-center">
+    <div class="d-flex align-items-center">
+      <a href="#" class="navbar-brand">
+        <img src="assets/images/Bea/logoBeaOfficiel.png" class="logo d-lg-inline d-inline" alt="CoolBrand">
+      </a>
+
+      <div class="dropdown d-lg-none ms-4">
+        <button class="btn btn-light fw-bold bg-light-grey btn-sm dropdown-toggle align-items-center" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <img [src]="selectedFlag" class="flag-icon" alt="{{ selectedLang }}"> {{ selectedLang }}
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end w-auto" aria-labelledby="dropdownMenuButton">
+          <li *ngFor="let lang of languages">
+            <a class="dropdown-item" href="#" (click)="selectLanguage(lang, $event)">
+              <img [src]="lang.flag" class="flag-icon" alt="{{ lang.name }}"> {{ lang.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="d-flex margin-right-button">
+      <a href="#" class="btn sm btn-primary header-btn ms-2 d-none d-lg-block fw-bold" (click)="openPreDomiciliationWindow($event)">
+        <i class="fa fa-calendar"></i> &nbsp; {{ languageService.getTranslation('Pré-domiciliation') }}
+      </a>
+      <a href="#" class="btn sm btn-white mt-1 d-lg-none txt-bea header-btn-mobile" (click)="openPreDomiciliationWindow($event)">
+        <i class="fa fa-calendar"></i> <br>
+        <h6 class="fw-bold">{{ languageService.getTranslation('Pré-domiciliation') }}</h6>
+      </a>
+      
+      <a href="#" class="btn sm btn-primary header-btn ms-2 d-none d-lg-block fw-bold" (click)="openEbankingWindow($event)">
+        <i class="fa fa-user"></i> &nbsp; {{ languageService.getTranslation('E-Banking') }}
+      </a>
+      <a href="#" class="btn sm btn-white mt-1 d-lg-none txt-bea header-btn-mobile" (click)="openEbankingWindow($event)">
+        <i class="fa fa-user"></i> <br>
+        <h6 class="fw-bold">{{ languageService.getTranslation('E-Banking') }}</h6>
+      </a>
+      <div class="dropdown d-none d-lg-block mt-1 ms-2">
+        <button class="btn btn-light fw-bold bg-light-grey btn-sm dropdown-toggle align-items-center" type="button" id="dropdownMenuButtonLarge" data-bs-toggle="dropdown" aria-expanded="false">
+          <img [src]="selectedFlag" class="flag-icon" alt="{{ selectedLang }}"> {{ selectedLang }}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButtonLarge">
+          <li *ngFor="let lang of languages">
+            <a class="dropdown-item" href="#" (click)="selectLanguage(lang, $event)">
+              <img [src]="lang.flag" class="flag-icon" alt="{{ lang.name }}"> {{ lang.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

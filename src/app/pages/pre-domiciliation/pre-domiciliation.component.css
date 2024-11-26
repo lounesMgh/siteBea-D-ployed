@@ -1,0 +1,46 @@
+.col-md-7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sign-container {
+  max-width: 470px;
+}
+
+.icon-height {
+  height: 24px;
+  width: 24px;
+}
+
+.inputbox {
+  border: 1px solid #cfcece;
+  outline: none;
+  padding-right: 30px;
+}
+
+.inputbox:focus {
+  border: 2px solid #1163de;
+}
+
+.input-label {
+  top: -12px;
+  left: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.signin-border {
+  width: 13rem;
+  border: 2px solid #1163de;
+}
+
+.password-icon,
+.username-icon{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #1163de;
+}

@@ -1,0 +1,90 @@
+/* Ajustement de la taille de l'image */
+.logo {
+    height: 25px;
+    /* Taille par défaut pour mobile */
+}
+
+.margin-header {
+    margin-left: 7rem;
+    margin-right: 7rem;
+}
+
+.bg-header {
+    background-size: cover;
+    /* Ajuste l'image pour couvrir entièrement le body */
+    background-position: center;
+    /* Centre l'image dans le body */
+    background-repeat: no-repeat;
+    /* Empêche la répétition de l'image */
+    background-attachment: fixed;
+}
+
+/* Ajustement de la taille du bouton */
+.header-btn {
+    /* Taille par défaut pour mobile */
+    font-size: 12px;
+}
+.marginMarque {
+    margin-left: 7rem;
+    margin-right: 7rem;
+    font-size: 11px ;
+}
+@media (min-width: 992px) {
+    .logo {
+        height: 40px;
+        /* Taille de l'image sur PC */
+    }
+
+    .header-btn {
+        padding: 0.5rem 1rem;
+
+        font-size: 15px;
+    }
+
+    .margin-right-button {
+        margin-right: 0px !important;
+    }
+}
+
+/* Ajustement de la taille du bouton pour mobile */
+@media (max-width: 991px) {
+    .margin-header {
+        margin-left: 10px;
+        margin-right: 10px;
+      
+    }
+
+    .d-lg-none {
+        padding: 0.3rem 0.5rem;
+        font-size: 12px;
+        margin-right: 0px;
+    }
+
+    .margin-right-button {
+        margin-right: 60px !important;
+    }
+
+    h6 {
+        margin: 0 !important;
+        font-size: 0.9rem;
+    }
+
+    .header-btn-mobile {
+        margin-right: 0;
+        font-size: 0.9rem !important;
+    }
+    .marginMarque {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 11px ;
+    }
+}
+
+.flag-icon {
+    width: 30px;
+    height: 20px;
+   
+}
+.dropdown{
+    z-index: 2000;
+}

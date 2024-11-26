@@ -1,0 +1,100 @@
+<div class=" marginImage  ">
+  <div class="image-container col-lg-12">
+    <img src="../../../../assets/images/Bea/solutionMonetique.jpg" class="img-fluid responsive-img"
+      alt="Image">
+    <div class="card card-overlay rounded-0">
+      <div class="card-body">
+        <h5 class="fw-bold txt-bea">
+          SOLUTIONS MONETIQUE
+        </h5>
+        <h6>
+          L’application mobile BEA pour gérer vos comptes où et quand vous voulez avec votre smartphone.
+        </h6>
+        <div class="d-md-flex justify-content-end mt-3">
+          <button type="button" class="btn btn-primary  fw-bold " (click)="navigateTo(url!)">
+            En savoir plus&nbsp;<i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div>
+    <h3 class="fw-bold txt-bea text-center">
+      Révolutionnez vos transactions avec nos cartes monétiques BEA
+    </h3>
+    <p class="text-center">
+      À la BEA, nous comprenons l'importance d'une gestion financière sûre et efficace. Nos Cartes monétiques vous
+      offrent non seulement la commodité des paiements sécurisés mais aussi des avantages exclusifs adaptés à vos
+      besoins
+      quotidiens. Simplifiez vos transactions tout en bénéficiant d'un service client dédié, parce que chez BEA, votre
+      satisfaction est notre priorité.
+    </p>
+    <h3 class="fw-bold txt-bea text-center  mt-4 mb-3">
+      Nos cartes doméstiques
+    </h3>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mb-4" *ngFor="let carte of cartesCib">
+        <div class="card h-100">
+          <img [src]="carte.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="text-center text-secondary fw-bold">{{ carte.title }}</h5>
+            <p class="card-text">{{ carte.designation }}</p>
+            <ul class="custom-list">
+              <li *ngFor="let item of carte.listItems" class="d-flex align-items-start">
+                <i class="fa-solid fa-circle-check txt-bea mt-1"></i>&nbsp;
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="fw-bold txt-bea text-center mt-4 mb-3">
+      Nos cartes international(Cartes Mastercard)
+    </h3>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let carte of cartesMaster">
+        <div class="card h-100">
+          <img [src]="carte.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="text-center text-secondary fw-bold">{{ carte.title }}</h5>
+            <h6 class=" text-center txt-bea">{{carte.titleNext}}</h6>
+            <p class="card-text">{{ carte.designation }}</p>
+            <ul class="custom-list">
+              <li *ngFor="let item of carte.listItems" class="d-flex align-items-start">
+                <i class="fa-solid fa-circle-check txt-bea mt-1"></i>&nbsp;
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 class="fw-bold txt-bea text-center mt-4 mb-3">
+      Nos cartes international(Cartes American Express)
+    </h3>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4" *ngFor="let carte of cartesAmerican">
+        <div class="card h-100">
+          <img [src]="carte.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="text-center text-secondary fw-bold">{{ carte.title }}</h5>
+            <h6 class=" text-center txt-bea">{{carte.titleNext}}</h6>
+            <p class=" card-text">{{ carte.designation }}</p>
+            <ul class="custom-list">
+              <li *ngFor="let item of carte.listItems" class="d-flex align-items-start">
+                <i class="fa-solid fa-circle-check txt-bea mt-1"></i>&nbsp;
+                <span>{{ item }}</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="mb-5">
+    <app-e-banking-component></app-e-banking-component>
+  </section>
+</div>

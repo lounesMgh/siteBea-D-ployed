@@ -1,0 +1,10 @@
+.chatbot-toggler {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 2000;
+  }
+  

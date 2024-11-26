@@ -1,0 +1,35 @@
+
+<div class="wrapper">
+    <div class="container main">
+      <div class="row">
+        <div class="col-md-6 side-image">
+          <img src="" alt="">
+          <div class="header-eb">
+            <img class="image-header" src="../../../assets/images/Bea/logo blanc.png" width="300">
+          </div>
+        </div>
+        <div class="col-md-6 right">
+          <div class="input-box">
+            <header class="txt-bea">
+              <img class="image-login" src="../../../assets/images/Bea/E-banking.png" width="200">
+            </header>
+            <div class="input-field mb-1">
+              <input type="text" class="input" id="Login" required="">
+              <label for="Login">Login</label>
+              <i class="fas fa-user"></i>
+              
+            </div>
+            <div class="input-field">
+                <input [type]="passwordFieldType" class="input" id="pass" required>
+                <label for="pass">Mot de passe</label>
+                <i id="showCursor" class="fas" [ngClass]="{'fa-eye-slash': passwordFieldType === 'password', 'fa-eye': passwordFieldType === 'text'}" (click)="togglePasswordVisibility()"></i>
+              </div>
+            <div class="input-field mt-3">
+              <button class="btn btn-primary mt-3"><strong>Connexion</strong></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

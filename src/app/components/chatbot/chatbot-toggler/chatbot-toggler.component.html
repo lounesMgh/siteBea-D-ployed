@@ -1,0 +1,21 @@
+<a href="#" class="btn btn-primary btn-sm chatbot-toggler rounded-pill" (click)="toggleChatbot($event)">
+    <div class="row d-none d-lg-flex" *ngIf="!isChatbotOpen">
+        <div class="col-md-3">
+            <i class="fa-solid fa-comments fs-1"></i>
+        </div>
+        <div class="col-md-9 text-start">
+            <strong>{{ languageService.getTranslation("Aides et conseils")}}</strong><br>
+            {{ languageService.getTranslation("Je réponds à vos questions")}}
+        </div>
+    </div>
+    <div class="row d-none d-md-flex d-lg-none" *ngIf="!isChatbotOpen">
+        <div class="col-3">
+            <i class="fa-solid fa-comments "></i>
+        </div>
+        <span *ngIf="isChatbotOpen"><i class="fa-solid fa-xmark"></i></span>
+    </div>
+    <div class="row d-md-none" *ngIf="!isChatbotOpen">
+        <span><i class="fa-solid fa-comments"></i></span>
+    </div>
+    <span *ngIf="isChatbotOpen"><i class="fa-solid fa-xmark"></i></span>
+</a>

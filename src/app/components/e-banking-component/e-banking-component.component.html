@@ -1,0 +1,26 @@
+<div class="row gy-4 justify-content-center align-items-center ">
+    <div class="col-lg-6 order-first order-lg-last ps-5">
+      <img src="../../../../assets/images/Bea/E-banking.png" 
+      class="img-fluid responsive-img ">
+    </div>
+
+    <div class="col-lg-6 d-flex flex-column justify-content-center ps-5">
+      <h3 class="mb-3 text-primary fw-bold"> {{ languageService.getTranslation("Simplifiez votre gestion bancaire avec l'application mobile BEA")}}</h3>
+      <h6>
+       {{ languageService.getTranslation("Découvrez l'application mobile BEA, votre compagnon financier personnel qui vous permet de gérer vos comptes où que vous soyez, directement depuis votre smartphone.")}}
+      </h6>
+      <ul class="mt-3 custom-list">
+        <li><i class="fa-solid fa-circle-check txt-bea"></i> &nbsp;<span> {{ languageService.getTranslation("Consulter les soldes de vos comptes et vos dernières transactions.")}}</span></li>
+        <li><i class="fa-solid fa-circle-check txt-bea"></i> &nbsp;<span>{{ languageService.getTranslation("Échanger avec votre banque via la messagerie.")}}</span></li>
+        <li><i class="fa-solid fa-circle-check txt-bea"></i> &nbsp;<span>{{ languageService.getTranslation("Rechercher vos opérations dans votre relevé de compte.")}}</span></li>
+        <li><i class="fa-solid fa-circle-check txt-bea"></i> &nbsp;<span>{{ languageService.getTranslation("Effectuez facilement vos virements en ligne.")}}</span></li>
+      </ul>
+      <div class="card-footer  me-5">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-primary fw-bold"(click)="navigateTo(url)">
+            {{ languageService.getTranslation("En savoir plus")}}&nbsp;<i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>

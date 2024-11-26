@@ -1,0 +1,87 @@
+<div class=" marginImage  ">
+  <div class="image-container col-lg-12">
+    <img src="../../../assets/images/Bea/news.jpg" class="img-fluid responsive-img" alt="Image">
+    <div class="card card-overlay rounded-0">
+      <div class="card-body">
+        <h5 class="fw-bold txt-bea">
+          NOS ACTUALITES
+        </h5>
+        <h6>
+          Chez BEA, nous vous tenons toujours au courant des opportunités qui façonnent l'avenir financier en Algérie et au-delà. 
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="mb-2">
+    <h3 class="fw-bold txt-bea text-center">Découvrez les actualités de la BEA.</h3>
+    <p class="text-center">
+      Restez informés des développements, innovations et événements passionnants à la Banque Extérieure
+      d'Algérie. Explorez nos actualités pour suivre nos initiatives, nos services améliorés et nos engagements envers
+      nos clients et notre communauté.
+    </p>
+      <div class="container mt-4">
+        <div class="row mb-3 ">
+          <div class="row align-items-end mb-3">
+            <div class="col-md-5">
+              <div class="position-relative mt-3">
+                <input type="date" class="form-control inputbox shadow-none p-2" name="startDate" placeholder=""
+                  [(ngModel)]="startDate" [ngClass]="{'is-invalid': dateError}" (focus)="onDateInputFocus($event)">
+                <div class="input-label position-absolute px-2 bg-white z-1">
+                  <label for="startDate" class="control-label txt-bea fw-bold">Date de début</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="position-relative mt-3">
+                <input type="date" class="form-control inputbox shadow-none p-2" name="endDate" placeholder=""
+                  [(ngModel)]="endDate" (focus)="onDateInputFocus($event)">
+                <div class="input-label position-absolute px-2 bg-white z-1">
+                  <label for="endDate" class="control-label txt-bea fw-bold">Date de fin</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <button type="button" class="btn btn-primary mt-2" (click)="onFilter()">Filtrer</button>
+            </div>
+          </div>
+          
+          <div *ngIf="dateError" class="alert alert-danger">
+            {{ dateErrorMessage }}
+          </div>
+          
+          <div class="row">
+            <div class="col-md-6 mb-4" *ngFor="let new of pagedNews; let i = index">
+              <div class="card h-100">
+                <div class="row g-0 h-100">
+                  <div class="col-md-5">
+                    <img [src]="new.image" class="img-fluid w-100 h-100 rounded-start" [alt]="new.title"
+                      style="object-fit: cover;">
+                  </div>
+                  <div class="col-md-7 d-flex flex-column">
+                    <div class="card-body flex-grow-1">
+                      <h6>{{ new.title }}</h6>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button type="button" class="btn btn-primary btn-sm fw-bold m-4">
+                        En savoir plus&nbsp;<i class="fa-solid fa-chevron-right"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <div class="d-flex justify-content-center mb-5">
+            <button type="button" class="btn btn-primary" (click)="previousPage()" [disabled]="currentPage === 1">
+              <i class="fa-solid fa-chevron-left"></i>&nbsp;Précédent
+            </button>&nbsp;
+            <button type="button" class="btn btn-primary" (click)="nextPage()" [disabled]="currentPage === totalPages">
+              Suivant&nbsp;<i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>  

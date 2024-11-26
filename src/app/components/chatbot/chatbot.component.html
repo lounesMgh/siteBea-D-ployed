@@ -1,0 +1,19 @@
+<div class="chatbot" [ngClass]="{'show': isChatbotOpen}">
+  <header class="bg-primary text-white p-3">
+    <div class="d-flex align-items-center">
+      <img class="ms-2" src="../../../assets/images/Bea/BLANC LOGO BEA SEUL.png" height="30" alt="Logo">
+      <h6 class=" ms-2"><strong>{{ languageService.getTranslation("Aides et conseils")}}</strong></h6>
+    </div>
+  </header>
+  <ul class="chatbox">
+    <li *ngFor="let chat of chats" [ngClass]="{'outgoing': chat.isOutgoing, 'incoming': !chat.isOutgoing}">
+      <span *ngIf="!chat.isOutgoing"></span>
+      <p [ngClass]="{'error': chat.isError}">{{ languageService.getTranslation(chat.message)}}</p>
+    </li>
+  </ul>
+  <div class="chat-input">
+    <textarea [(ngModel)]="userMessage" placeholder="Enter votre message ici..." spellcheck="false"
+      (keydown)="checkEnter($event)" required></textarea>
+    <span id="send-btn" (click)="sendMessage()"><i class="fa-solid fa-paper-plane text-primary"></i></span>
+  </div>
+</div>

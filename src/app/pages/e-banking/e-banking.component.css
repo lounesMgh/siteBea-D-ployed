@@ -1,0 +1,136 @@
+.wrapper {
+    background: #dfe6f4;
+    padding: 0 20px 0 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.side-image {
+    background-color: #1163de;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.header-eb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-box {
+    width: 330px;
+    box-sizing: border-box;
+}
+
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: -5rem;
+    font-size: 25px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #1163de;
+    padding-right: 40px;
+}
+
+.input-field i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #1163de;
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+    top: -10px;
+    font-size: 13px;
+    color: black;
+}
+
+.button {
+    height: 45px;
+    width: 100%;
+}
+
+.fas {
+    padding-bottom: 20px;
+}
+
+.fa-user {
+    cursor: auto !important;
+}
+
+@media only screen and (max-width: 768px) {
+    .side-image {
+        border-radius: 10px 10px 0 0;
+        height: 6rem;
+    }
+
+    .image-header {
+        width: 13rem;
+    }
+
+    .image-login {
+        width: 9rem;
+    }
+
+    .row {
+        max-width: 420px;
+        width: 100%;
+    }
+
+    .input-box header {
+        margin-top: -10rem;
+    }
+}
