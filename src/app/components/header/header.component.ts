@@ -7,6 +7,7 @@ import { LanguageService } from 'src/app/services/language/language.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
+
 export class HeaderComponent implements OnInit {
   isNavbarOpen = false;
   currencies = [
@@ -50,13 +51,13 @@ export class HeaderComponent implements OnInit {
 
   openEbankingWindow(event: Event): void {
     event.preventDefault(); 
-    const url = window.location.origin + '/siteBea-D-ployed/E-Banking';
+    const url = window.location.origin + '/E-Banking';
     window.open(url, '_blank');
   }
   
   openPreDomiciliationWindow(event: Event): void {
     event.preventDefault(); 
-    const url = window.location.origin + '/siteBea-D-ployed/Pré-domiciliation';
+    const url = window.location.origin + '/Pré-domiciliation';
     window.open(url, '_blank');
   }
   

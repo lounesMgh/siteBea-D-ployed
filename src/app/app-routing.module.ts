@@ -40,11 +40,11 @@ const routes: Routes = [
     component: EventComponent
   },
   {
-    path: 'siteBea-D-ployed/E-Banking',
+    path: 'E-Banking',
     component: EBankingComponent
   },
   {
-    path: 'siteBea-D-ployed/Pré-domiciliation',
+    path: 'Pré-domiciliation',
     component: PreDomiciliationComponent
   },
   {
@@ -95,7 +95,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
